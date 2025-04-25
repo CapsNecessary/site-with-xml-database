@@ -1,5 +1,4 @@
 document.addEventListener( "DOMContentLoaded", function (){
-	console.log( 0 );
 	const navList = document.getElementById( "menu" );
 	const main = document.querySelector( "main" );
 	const mainHTML = main.innerHTML;
@@ -30,8 +29,6 @@ document.addEventListener( "DOMContentLoaded", function (){
 	function showPage( xml, hash ){
 		const adres = hash.replace( /^#/, '' );
 		const p = Array.from( xml.querySelectorAll( "podstrona" ) ).find( p => p.querySelector( "adres" ).textContent === adres );
-
-		console.log( xml, hash, p, adres )
 		
 		if( p ){
 			const tytul = p.querySelector( "tytul" ).textContent;
@@ -67,5 +64,4 @@ document.addEventListener( "DOMContentLoaded", function (){
 	}
 
 	loadXML( init );
-	console.log( 1 );
 });
