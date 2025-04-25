@@ -25,7 +25,7 @@ a {
 }
 a:focus, :focus-visible{
 	color: var( --primary-up );
-	outline-style: solid;
+	outline: solid 1px;
 }
 a:hover{ color: var( --primary-down ); }
 
