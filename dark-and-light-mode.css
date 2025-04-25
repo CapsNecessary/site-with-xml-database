@@ -1,0 +1,158 @@
+:root{
+	/* Overwrite this variables */
+	--lightTheme-background: white;
+	--darkTheme-background: black;
+	--lightTheme-text: black;
+	--darkTheme-text: white;
+	--lightTheme-primary: transparent;
+	--darkTheme-primary: transparent;
+	--lightTheme-secondary: transparent;
+	--darkTheme-secondary: transparent;
+	--lightTheme-tertiary: transparent;
+	--darkTheme-tertiary: transparent;
+	/* tertiary and 4 */
+	--lightTheme-positive: green;
+	--darkTheme-positive: green;
+	--lightTheme-warning: yellow;
+	--darkTheme-warning: yellow;
+	--lightTheme-error: red;
+	--darkTheme-error: red;
+	--lightTheme-form-element-background: transparent;
+	--darkTheme-form-element-background: transparent;
+	--lightTheme-selection-background: white;
+	--darkTheme-selection-background: black;
+	--lightTheme-selection-text: black;
+	--darkTheme-selection-text: white;
+	--lightTheme-scrollbar-primary: white;
+	--darkTheme-scrollbar-primary: black;
+	--lightTheme-scrollbar-secondary: black;
+	--darkTheme-scrollbar-secondary: white;
+
+	/* Don't overwrite the variables below */
+	--background: var(--lightTheme-background);
+	--text: var(--lightTheme-text);
+	--primary: var(--lightTheme-primary);
+	--secondary: var(--lightTheme-secondary);
+	--tertiary: var(--lightTheme-tertiary);
+	--positive: var(--lightTheme-positive);
+	--warning: var(--lightTheme-warning);
+	--error: var(--lightTheme-error);
+	--form-element-background: var(--lightTheme-form-element-background);
+	--selection-background: var(--lightTheme-selection-background);
+	--selection-text: var(--lightTheme-selection-text);
+	--scrollbar-primary: var(--lightTheme-scrollbar-primary);
+	--scrollbar-secondary: var(--lightTheme-scrollbar-secondary);
+}
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--background: var(--darkTheme-background);
+		--text: var(--darkTheme-text);
+		--primary: var(--darkTheme-primary);
+		--secondary: var(--darkTheme-secondary);
+		--tertiary: var(--darkTheme-tertiary);
+		--positive: var(--darkTheme-positive);
+		--warning: var(--darkTheme-warning);
+		--error: var(--darkTheme-error);
+		--form-element-background: var(--darkTheme-form-element-background);
+		--selection-background: var(--darkTheme-selection-background);
+		--selection-text: var(--darkTheme-selection-text);
+		--scrollbar-primary: var(--darkTheme-scrollbar-primary);
+		--scrollbar-secondary: var(--darkTheme-scrollbar-secondary);
+	}
+}
+
+/* Classes for setting mode manually */
+.light-mode{
+	--background: var(--lightTheme-background);
+	--text: var(--lightTheme-text);
+	--primary: var(--lightTheme-primary);
+	--secondary: var(--lightTheme-secondary);
+	--tertiary: var(--lightTheme-tertiary);
+	--positive: var(--lightTheme-positive);
+	--warning: var(--lightTheme-warning);
+	--error: var(--lightTheme-error);
+	--form-element-background: var(--lightTheme-form-element-background);
+	--selection-primary: var(--lightTheme-selection-primary);
+	--selection-secondary: var(--lightTheme-selection-secondary);
+	--scrollbar-primary: var(--lightTheme-scrollbar-primary);
+	--scrollbar-secondary: var(--lightTheme-scrollbar-secondary);
+}
+
+.dark-mode{
+	--background: var(--darkTheme-background);
+	--text: var(--darkTheme-text);
+	--primary: var(--darkTheme-primary);
+	--secondary: var(--darkTheme-secondary);
+	--tertiary: var(--darkTheme-tertiary);
+	--positive: var(--darkTheme-positive);
+	--warning: var(--darkTheme-warning);
+	--error: var(--darkTheme-error);
+	--form-element-background: var(--darkTheme-form-element-background);
+	--selection-primary: var(--darkTheme-selection-primary);
+	--selection-secondary: var(--darkTheme-selection-secondary);
+	--scrollbar-primary: var(--darkTheme-scrollbar-primary);
+	--scrollbar-secondary: var(--darkTheme-scrollbar-secondary);
+}
+
+html{
+	color-scheme: light dark;
+	scrollbar-color: var(--scrollbar-secondary) var(--scrollbar-primary);
+}
+
+body{
+	margin: 0;
+	background-color: var(--background);
+	color: var(--text);
+}
+
+img, picture, svg, video{
+	max-width: 100%;
+	display: block;
+}
+
+hr{ color: var( --text ); }
+
+dialog{
+	border: 1px solid var( --text );
+	background-color: var( --form-element-background );
+	color: var( --text );
+}
+
+input[type=radio]{
+	appearance: none;
+	height: 1em; width: 1em;
+	border-radius: 50%;
+}
+
+input[type=radio]:checked{ background: var( --primary ) }
+
+button, input, select, fieldset, textarea, meter, progress{
+	border: 1px solid var( --text );
+	border-radius: 0;
+	margin:	1px;
+	background-color: var( --form-element-background );
+}
+
+button, select, input[type=button], input[type=checkbox], input[type=color], input[type^=date], input[type=file], input[type=radio], input[type=range],
+input[type=reset], input[type=submit], input[type=time], summary{ cursor: pointer; }
+
+::selection{
+	color: var( --selection-background );
+	text-decoration: var( --selection-background );
+	background-color: var( --selection-text );
+}
+
+::-moz-selection{
+	color: var( --selection-background );
+	text-decoration: var( --selection-background );
+	background-color: var( --selection-text );
+}
+
+::-webkit-scrollbar{ background-color: var(--scrollbar-primary); }
+::-webkit-scrollbar-thumb{ background-color: var(--scrollbar-secondary); }
+
+@media (prefers-reduced-motion: no-preference){
+	body{ scroll-behavior: smooth; }
+	:has{ scroll-behavior: smooth; }
+}
