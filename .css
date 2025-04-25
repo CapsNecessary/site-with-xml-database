@@ -23,12 +23,17 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 }
-a:focus, :focus-visible{
+a:focus, a:focus-visible{
 	color: var( --primary-up );
 	outline: solid 1px;
 }
 a:hover{ color: var( --primary-down ); }
-
+a::selection{ color: var( --background ); background: var( --primary ); }
+a::-moz-selection{ color: var( --background ); background: var( --primary ); }
+a:hover::selection{ background: var( --primary-down ); }
+a:hover::-moz-selection{ background: var( --primary-down ); }
+a:focus::selection, a:focus-visible::selection{ background: var( --primary-up ); }
+a:focus::-moz-selection, a:focus-visible::-moz-selection{ background: var( --primary-up ); }
 
 @media only screen and (min-width: 900px){
 
