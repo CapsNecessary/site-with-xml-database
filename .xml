@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stronaZwierzat>
+  <podstrona>
+	<tytul>Zwyczaje wiewiórek</tytul>
+	<adres>gryzonie/wiewiorki</adres>
+	<tresc>
+	  <![CDATA[
+		<p>Wiewiórki są aktywne głównie w ciągu dnia, szczególnie rano i późnym popołudniem. Uwielbiają wspinać się po drzewach i przeskakiwać z gałęzi na gałąź.</p>
+		<p>Gromadzą pożywienie na zimę, chowając orzechy i nasiona w różnych miejscach. Ich pamięć jest zaskakująco dobra, co pozwala im odnaleźć skrytki wiele tygodni później.</p>
+	  ]]>
+	</tresc>
+	<obraz>obrazy/wiewiorka.png</obraz>
+  </podstrona>
+
+  <podstrona>
+	<tytul>Życie wilków w Polsce</tytul>
+	<adres>drapiezniki/wilki</adres>
+	<tresc>
+	  <![CDATA[
+		<p>Wilki są zwierzętami społecznymi, żyjącymi w zorganizowanych grupach rodzinnych zwanych watahami. Wataha ma zazwyczaj jedną parę reprodukcyjną.</p>
+		<p>Ich terytorium może obejmować setki kilometrów kwadratowych. Komunikują się za pomocą wycia, znakowania terenu oraz języka ciała.</p>
+	  ]]>
+	</tresc>
+	<obraz>obrazy/wilk.png</obraz>
+  </podstrona>
+
+  <podstrona>
+	<tytul>Ptaki wodne – kaczki</tytul>
+	<adres>ptaki/kaczki</adres>
+	<tresc>
+	  <![CDATA[
+		<p>Kaczki to popularne ptaki wodne zamieszkujące jeziora, stawy i rzeki. Często można je spotkać w miejskich parkach, gdzie chętnie jedzą okruchy od ludzi.</p>
+		<p>Potrafią pływać dzięki błoniastym stopom, a ich pióra mają właściwości wodoodporne. Samce często wyróżniają się bardziej barwnym upierzeniem.</p>
+	  ]]>
+	</tresc>
+	<obraz>obrazy/kaczka.png</obraz>
+  </podstrona>
+
+  <podstrona>
+	<tytul>Jeże i ich zwyczaje</tytul>
+	<adres>ssaki/jeze</adres>
+	<tresc>
+	  <![CDATA[
+		<p>Jeże to niewielkie ssaki, które prowadzą nocny tryb życia. Zwijają się w kulkę, aby chronić się przed drapieżnikami, wykorzystując swoje ostre kolce.</p>
+		<p>Zimą zapadają w hibernację. Żywią się owadami, ślimakami i małymi bezkręgowcami, pomagając kontrolować ich populacje w ogrodach.</p>
+	  ]]>
+	</tresc>
+	<obraz>obrazy/jez.png</obraz>
+  </podstrona>
+</stronaZwierzat>

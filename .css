@@ -1,0 +1,22 @@
+@media only screen and (min-width: 900px){
+
+	main {
+		float: left;
+		width: 70%;
+	}
+
+	aside {
+		float: right;
+		width: 28%;
+	}
+
+	footer {
+		clear: both;
+	}
+
+	#kontener {
+		width: 850px;
+		margin: 0 auto 0 auto;
+	}
+
+}
