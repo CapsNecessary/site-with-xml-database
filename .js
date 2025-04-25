@@ -37,9 +37,9 @@ document.addEventListener( "DOMContentLoaded", function (){
 
 			main.innerHTML = `
 				<article>
-					<h2>${tytul}</h2>
-					${tresc}
-					<img src="${obraz}" alt="${tytul}" style="max-width: 100%; margin-top: 10px;">
+					<h2>${ tytul }</h2>
+					${ tresc }
+					<img src="${ obraz }" alt="${ tytul }" style="max-width: 100%; margin-top: 10px;">
 				</article>
 			`;
 		}
