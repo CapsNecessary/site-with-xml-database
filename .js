@@ -2,6 +2,7 @@ document.addEventListener( "DOMContentLoaded", function (){
 	console.log( 0 );
 	const navList = document.getElementById( "menu" );
 	const main = document.querySelector( "main" );
+	const mainHTML = main.innerHTML;
 
 	function loadXML( callback ){
 		fetch(".xml")
@@ -28,11 +29,11 @@ document.addEventListener( "DOMContentLoaded", function (){
 
 	function showPage( xml, hash ){
 		const adres = hash.replace( /^#/, '' );
-		const p = Array.from(xml.querySelectorAll( "podstrona" )).find( p =>
-			p.querySelector( "adres" ).textContent === adres
-		);
+		const p = Array.from( xml.querySelectorAll( "podstrona" ) ).find( p => p.querySelector( "adres" ).textContent === adres );
 
-		if(p){
+		console.log( xml, hash, p, adres )
+		
+		if( p ){
 			const tytul = p.querySelector( "tytul" ).textContent;
 			const tresc = p.querySelector( "tresc" ).textContent;
 			const obraz = p.querySelector( "obraz" ).textContent;
@@ -44,14 +45,14 @@ document.addEventListener( "DOMContentLoaded", function (){
 					<img src="${obraz}" alt="${tytul}" style="max-width: 100%; margin-top: 10px;">
 				</article>
 			`;
-		} else {
-			main.innerHTML = `
+		}
+		else if( "" == adres ) main.innerHTML = mainHTML;
+		else main.innerHTML = `
 				<article>
 					<h2>Nie znaleziono strony</h2>
 					<p>Podana podstrona nie istnieje lub została usunięta.</p>
 				</article>
 			`;
-		}
 	}
 
 	function init( xml ){
