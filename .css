@@ -1,3 +1,35 @@
+:root{
+	--lightTheme-primary: rgba( 32, 16, 150 );
+	--lightTheme-primary-up: rgba( 48, 24, 225 );
+	--lightTheme-primary-down: rgba( 16, 8, 75 );
+	--darkTheme-primary: rgba( 96, 32, 255, 1 );
+	--darkTheme-primary-up: rgba( 144, 48, 255 );
+	--darkTheme-primary-down: rgba( 48, 16, 128 );
+	
+	--primary-up: var( --lightTheme-primary-up );
+	--primary-down: var( --lightTheme-primary-down );
+}
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--primary-up: var( --darkTheme-primary-up );
+		--primary-down: var( --darkTheme-primary-down );
+}}
+
+
+a {
+	color: var( --primary );
+	outline-color: currentColor;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:focus, :focus-visible{
+	color: var( --primary-up );
+	outline-style: solid;
+}
+a:hover{ color: var( --primary-down ); }
+
+
 @media only screen and (min-width: 900px){
 
 	main {
@@ -13,7 +45,7 @@
 	footer {
 		clear: both;
 	}
-
+	
 	#kontener {
 		width: 850px;
 		margin: 0 auto 0 auto;
