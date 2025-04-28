@@ -2,3 +2,6 @@
 	Wariant programistyczny:
 		- Głównie front-end
 		- Prosty, brak interpretera /kompilatora
+		- Brak responsywności
+		- Brak możliwości edycji bazy na poziome klienta. Jedynie serwer może edytować ją
+		- Brak prywatność, wszystkie pliki i baza są publiczne
